@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>My Aesthetic Kanban</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="kanban-wrapper">
+      <header>
+        <h1><i class="fas fa-star"></i> My Tasks</h1>
+        <!-- Optional: Dark Mode Toggle -->
+        <!-- <button id="toggle-theme">🌙</button> -->
+      </header>
+
+      <main class="board">
+        <!-- TO DO -->
+        <section class="list" id="todo">
+          <h2>📝 To Do</h2>
+          <div class="card" draggable="true" id="task1">✨ Make Biryani</div>
+          <div class="card" draggable="true" id="task2">🧼 Clean Room</div>
+        </section>
+
+        <!-- IN PROGRESS -->
+        <section class="list" id="in-progress">
+          <h2>⏳ In Progress</h2>
+          <div class="card" draggable="true" id="task3">💻 Code Kanban</div>
+        </section>
+
+        <!-- DONE -->
+        <section class="list" id="done">
+          <h2>✅ Done</h2>
+          <div class="card" draggable="true" id="task4">☕ Make Chai</div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

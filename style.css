@@ -1,0 +1,106 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #fceff9, #e3f2fd);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem;
+  color: #333;
+}
+
+/* Container */
+.kanban-wrapper {
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #d63384;
+}
+
+/* Board Layout */
+.board {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Each List Column */
+.list {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 32%;
+  min-height: 450px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.list h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  color: #6c757d;
+}
+
+/* Task Cards */
+.card {
+  background-color: #fdfdfd;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  cursor: grab;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+}
+
+.card:active {
+  cursor: grabbing;
+}
+
+/* When dragging over a list */
+.list.drag-over {
+  background-color: #f8f9fa;
+  border: 2px dashed #d63384;
+}
+
+/* While dragging card */
+.hide {
+  display: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .board {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .list {
+    max-width: 90%;
+    width: 100%;
+  }
+}
